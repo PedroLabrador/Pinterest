@@ -32,16 +32,32 @@
 }
 
 nav {
-	background: #2f2f2f;
+	background: white;
 }
 .navbar {
 	border-radius: 1em;
 }
 
-.search {
-
+.content {
+	display: inline-block
+}
+.has-feedback{
+	display: inline-block;
+	
+}
+#search {
+	padding-left: 42.5px;
 }
 
-.content {
-	display: inline-block;
+
+.form-control-feedback {
+	left: 0
+}
+
+.logo {
+	color: #bd081c;
+	fill: currentColor;
+    position: absolute;
+    top: 14px;
+    left: 28px;
 }
