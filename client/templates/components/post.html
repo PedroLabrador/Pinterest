@@ -1,5 +1,5 @@
 <template name='post'>
 	<div class="item {{level}}">
-		<img src="{{url}}" alt="{{desc}}">
+		<a href="/post/{{_id}}"><img src="{{ url store='images' uploading='/images/uploading.gif' }}" alt="{{_id}}"></a>
 	</div>
 </template>
