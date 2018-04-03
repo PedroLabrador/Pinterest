@@ -1,4 +1,19 @@
-/* CSS declarations go here */
+nav {
+	background: white;
+	padding-bottom: 8px
+}
+
+.navbar {
+	border-radius: 1em
+}
+
+.navbar-right {
+	margin: -7px
+}
+
+.content {
+	display: inline-block
+}
 
 .container {
 	display: grid;
@@ -20,38 +35,59 @@
 .level-1 {
 	grid-row-end: span 1
 }
+
 .level-2 {
 	grid-row-end: span 2
 }
+
 .level-3 {
 	grid-row-end: span 3
 }
 
 .clearfix::before, .clearfix::after, .dl-horizontal dd::before, .dl-horizontal dd::after, .container::before, .container::after, .container-fluid::before, .container-fluid::after, .row::before, .row::after, .form-horizontal .form-group::before, .form-horizontal .form-group::after, .btn-toolbar::before, .btn-toolbar::after, .btn-group-vertical > .btn-group::before, .btn-group-vertical > .btn-group::after, .nav::before, .nav::after, .navbar::before, .navbar::after, .navbar-header::before, .navbar-header::after, .navbar-collapse::before, .navbar-collapse::after, .pager::before, .pager::after, .panel-body::before, .panel-body::after, .modal-header::before, .modal-header::after, .modal-footer::before, .modal-footer::after {
-    content: none;
+    content: none
 }
 
-nav {
-	background: white;
-}
-.navbar {
-	border-radius: 1em;
+.search-container {
+	margin: 14px 0
 }
 
-.content {
-	display: inline-block
+div .has-feedback{
+	display: inline-block;	
+	width: 80%
 }
-.has-feedback{
-	display: inline-block;
-	
+
+@media (max-width: 768px) {
+	div .has-feedback{
+		width: 50% !important
+	}
 }
+
 #search {
+	border: 0;
 	padding-left: 42.5px;
+    border-radius: 4px;
+	width: 100% !important;
+	padding: 0 40px 0 52px;
+	color: #555;
+	background-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-shadow: none;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 600;
+    height: 100%;
+    line-height: 20px;
+    outline: none
 }
-
 
 .form-control-feedback {
-	left: 0
+	left: 0;
+    font-size: 16px;
+    font-weight: 600;
+    height: 100%;
+    line-height: 24px
 }
 
 .logo {
@@ -59,5 +95,5 @@ nav {
 	fill: currentColor;
     position: absolute;
     top: 14px;
-    left: 28px;
+    left: 28px
 }

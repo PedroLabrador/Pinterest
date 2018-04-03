@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor';
-import { Posts } from '../lib/collections';
+import { Posts } from '../../lib/collections';
 
-Template.home.events({
+Template.formPost.events({
 	'change .myFileInput': function(event, template) {
 		// FS.Utility.eachFile(event, function() {
 			var fsFile = new FS.File(event.target.files[0]);
@@ -12,14 +12,13 @@ Template.home.events({
 		    fr.onload = function() {
 		        var img = new Image;
 		        img.onload = function() {
-		        	var height = int(img.height);
-		            if (height <= 600) 
-		            	level = 'level-1';
+		        	var height = parseInt(img.height);
+		            if (height < 600) 
+		            	level += 'level-1';
 		            else if (height > 600 && height <= 1300)
-		            	level = 'level-2';
+		            	level += 'level-2';
 		            else
-		            	level = 'level-3';
-		            alert(img.height);
+		            	level += 'level-3';
 		        };
 		        img.src = fr.result;
 		    };
