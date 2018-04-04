@@ -23,3 +23,12 @@ iron:router
 accounts-ui
 accounts-password
 twbs:bootstrap
+cfs:standard-packages
+cfs:gridfs
+peppelg:bootstrap-3-modal
+accounts-twitter
+accounts-base
+useraccounts:unstyled
+fortawesome:fontawesome
+fourseven:scss
+aldeed:template-extension
