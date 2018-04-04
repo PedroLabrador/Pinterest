@@ -1,0 +1,11 @@
+<template name='home'>
+	<div class="login-modal {{ navtoggle }}">
+		<i class="fa fa-close close-login"></i>
+		{{ > atForm }}
+	</div>
+	<div class="container">
+		{{ #each posts }}
+			{{ > post }}
+		{{ /each }}
+	</div>
+</template>
