@@ -25,12 +25,12 @@
 								<li><a href="#">Manage Account</a></li>
 								<li><a href="#">Invite a friend</a></li>
 								<li role="separator" class="divider"></li>
-								<li><a href="/auth/signout">Log out</a></li>
+								<li><a class='logout'>Log out</a></li>
 							</ul>
 						</li>
 					{{ /if }}
 					{{ #unless currentUser }}
-						<button class='login-toggle'>Login</button>
+						<button class='btn-gen btn-login login-toggle'>Login</button>
 					{{ /unless }}
 				</ul>
 			</div>

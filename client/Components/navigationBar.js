@@ -6,11 +6,8 @@ Template.navigationBar.events({
 	},
 	'click .login-toggle': function() {
 		Session.set('nav-toggle', 'open');
-	}
-});
-
-Template.home.helpers({
-	navtoggle() {
-		return Session.get('nav-toggle');
+	},
+	'click .logout': ()=> {
+		Meteor.logout();
 	}
 });
