@@ -1,8 +1,9 @@
 <template name='LoginModal'>
-    <div style="margin-top:100px;">
+    <div class='login-modal {{ navtoggle }}'>
         <div style="background-color:#fff;border-radius:8px;position:relative;text-align:center;width:404px;margin:auto;min-height:440px;box-shadow:0 2px 10px rgba(0,0,0,0.45);">
             <div style="min-height:400px;padding:20px 10px;">
                 <div>
+                    <i class="fa fa-close close-login"></i>
                     <div style="display:block;height:45px;margin:5px auto;width:45px;">
                         <svg height="40" style="display:block;" viewBox="-3 -3 82 82" width="40">
                             <circle cx="38" cy="38" fill="white" r="40"></circle>
@@ -10,44 +11,23 @@
                         </svg>
                     </div>
                     <div style="margin:0 auto 25px;">
-                        <h3 style="color:#555;font-size:32px;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;letter-spacing:-1.2px;">Log in to see more</h3>
+                        <h3 style="color:#555;font-size:32px;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;letter-spacing:-1.2px;">
+                            {{ #unless title }} 
+                                Log in to see more 
+                            {{ /unless }} 
+                            {{ #if title }}
+                                Welcome to Pinterest 
+                            {{ /if }}
+                        </h3>
                     </div>
                 </div>
                 <div style="margin:0 auto;width:268px;">
                     <div>
-                        <form method="POST" novalidate="">
-                            <fieldset style="position:relative;margin-bottom:7px;">
-                                <span>
-                                    <input aria-invalid="false" class="form-control" id="email" name="id" placeholder="Email or phone number" value="" type="email">
-                                </span>
-                            </fieldset>
-                            <fieldset style="position:relative;">
-                                <span>
-                                    <input aria-invalid="false" class="form-control" id="password" name="password" placeholder="Password" value="" type="password">
-                                </span>
-                            </fieldset>
-                            <button aria-label="" class="red SignupButton active" style="border:0px;height:36px;display:inline-block;border-radius:4px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;padding:0 18px;font-size:15px;font-weight:bold;outline:none;-webkit-box-shadow:none;box-shadow:none;cursor:pointer;margin-top:10px;vertical-align:middle;text-align:center;background-color:#bd081c;color:#fff;width:100%;" type="submit">
-                                <div>Log in</div>
-                            </button>
-                        </form>
-                        <div style="height:10px;"></div>
-                        <p class="" style="margin-bottom:3px;overflow:hidden;text-align:center;color:#555;font-weight:bold;">OR</p>
-                        <div>
-                            <div style="position:relative;">
-                                <div>
-                                    {{ > loginTwitter }}
-                                </div>
-                            </div>
-                        </div>
+                    {{ > atForm }}
                     </div>
                     <div style="margin-top:15px;color:#555;">
                         <a href="#">Forgot your password?</a>
                     </div>
-                </div>
-                <div>
-                    <div style="border-bottom:#dedede 1px solid;margin:10px auto;width:110px;"></div>
-                    <span style="display:inline-block;margin-right:4px;">Not on Pinterest yet? </span>
-                    <button class="FullPageSignup__signupToggle" style="border:none;background-color:transparent;font-weight:bold;text-decoration:none;vertical-align:baseline;">Sign Up</button>
                 </div>
             </div>
         </div>
