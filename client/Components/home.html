@@ -1,8 +1,7 @@
 <template name='home'>
-	<div class="login-modal {{ navtoggle }}">
-		<i class="fa fa-close close-login"></i>
-		{{ > atForm }}
-	</div>
+	{{ #unless currentUser }}
+		{{ > LoginModal }}
+	{{ /unless }}
 	<div class="container">
 		{{ #each posts }}
 			{{ > post }}
